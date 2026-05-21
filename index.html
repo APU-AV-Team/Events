@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./nueva-logo.png" />
+    <link rel="apple-touch-icon" href="./nueva-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Responsive AV Team daily events webpage" />
+    <title>AV Team Events</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <aside class="date-time-panel" aria-label="Current date and time">
+        <div class="brand">
+          <img src="./nueva-logo.png" alt="Nueva logo" class="brand-logo" />
+          <span class="brand-text">AV Team</span>
+        </div>
+
+        <p class="eyebrow">Current date &amp; time</p>
+        <h1 id="currentDate" class="current-date">Loading date...</h1>
+        <div class="time-card">
+          <span id="currentTime" class="current-time">--:--:--</span>
+          <span id="timezone" class="timezone"></span>
+        </div>
+
+        <button id="soundButton" class="sound-button" type="button">Enable ringtone</button>
+      </aside>
+
+      <section class="events-panel" aria-label="Events by day">
+        <div class="events-header">
+          <div>
+            <p class="eyebrow">Schedule</p>
+            <h2 id="eventsTitle">Event</h2>
+          </div>
+        </div>
+
+        <div id="status" class="status" role="status">Loading events...</div>
+        <div id="eventsList" class="events-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
